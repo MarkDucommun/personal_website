@@ -1,0 +1,72 @@
+  body {
+    margin: 0
+  }
+  #title,
+  #subtitle,
+  #about,
+  #projects,
+  #blogs,
+  #resume {
+    display: inline;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    text-shadow: 1px 1px 5px  rgba(0,0,0,1),
+                0px -1px 0px rgba(139,0,0,0.8);
+    font-family: 'Lobster Two', cursive;
+  }
+
+  img {
+    height: 50px;
+  }
+
+  #about,
+  #projects,
+  #resume,
+  #blogs {
+    cursor: pointer;
+  }
+
+  #about:hover,
+  #projects:hover,
+  #resume:hover,
+  #blogs:hover {
+    color: darkred;
+  }
+
+  .content {
+    border: 2px solid black;
+    position: absolute;
+    margin: 0;
+    / padding: 10px;
+    overflow-x: hidden;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow:inset 0px 0px 15px rgba(0,0,0,0.8);
+  }
+
+  html {
+    background-image: url('../images/creampaper.png')
+  }
+
+  .banner {
+    position: relative;
+    / background-color: rgba(0, 0, 139, 0.5);
+    margin: 0;
+    padding: 0;
+  }
+
+  .words {
+    padding: 10px;
+  }
+
+  [class^="icon-"]:hover,
+  [class*=" icon-"]:hover {
+    color: darkred;
+  }
+
+  [class^="icon-"],
+  [class*=" icon-"] {
+    font-size: 30px;
+    text-shadow: 1px 1px 3px  rgba(0,0,0,1);
+  }
+
