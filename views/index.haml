@@ -2,204 +2,28 @@
 %html
   %head
     %title Mark Ducommun
+    
     %script{src: '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'}
-    /%link{href: 'http://fonts.googleapis.com/css?family=Quicksand:400,700', rel: 'stylesheet', type: 'text/css'}
+    %script{src: '../public/javascripts/application.js'}
+
     %link{href: 'http://fonts.googleapis.com/css?family=Lobster+Two:700,400', rel: 'stylesheet', type: 'text/css'}
+    %link{href: '../public/stylesheets/font-awesome.css', rel: 'stylesheet', type: 'text/css'}
+    %link{href: '../public/stylesheets/application.css', rel: 'stylesheet', type: 'text/css'}
+  
   %body
     %h1#title Mark Ducommun
     %h3#subtitle Web Developer
-    %h5#about About
-    %h5#projects Projects
-    %h5#resume Resume
+    .banner
+      %h5#about About
+      %h5#projects Projects
+      %h5#blogs Blogs
+      %h5#resume Resume
     .content
-    / %img{src: 'https://cdn1.iconfinder.com/data/icons/black-icon-social-media/512/0995-linkedin-logo-square2.png'}
-    / %img{src: 'https://cdn1.iconfinder.com/data/icons/black-icon-social-media/512/099303-facebook-logo-square.png'}
+      .words
+        #aboutwords
+          I'm an intensely curious individual who has spent the year immersing myself in computer science and web development.  I began my journey in August last year taking the prerequisite courses required to begin a master's in CS.  I set out with the intention of gaining a level of competency that allowed me to add value to a company while still being able to better myself.  I was able to excel, but didn't feel as though I was learning enough that directly impacted my ability to add value to a company. I finished the spring semester.
 
-:javascript
-  var height = window.innerHeight 
-  var width = window.innerWidth
-  var title = new Element('#title')
-  var subtitle = new Element('#subtitle')
-  var about = new Element('#about')
-  var projects = new Element('#projects')
-  var resume = new Element('#resume')
-  var content = new Element('.content')
-
-  $(function(){
-    resizeScreen()
-    $(window).resize(function(){
-      resizeScreen()
-    })
-  })
-
-  function resizeScreen(){
-    height = window.innerHeight
-    width = window.innerWidth
-    title.resize(0.08)
-    subtitle.resize(0.06)
-    about.resize(0.04)
-    projects.resize(0.04)
-    resume.resize(0.04)
-    content.resize(0.03, 10)
-  }
-
-  function Element(tag){
-    this.tag = $(tag)
-    this.fontSize = 0
-    this.width = 0
-    this.height = 0
-    this.top = 0
-    this.left = 0
-  }
-
-  Element.prototype.resize = function(scale){
-    this.setFontSize(scale)
-    this.other()
-    this.setWidth()
-    this.setHeight()
-    this.setLeft()
-    this.setTop()
-  }
-
-  Element.prototype.setFontSize = function(scale, min){
-    var fontSize
-    if(height < width){
-      fontSize = (height * scale) + 'px'
-    }
-    else{
-      fontSize = (width * scale) + 'px'
-    }
-    console.log(fontSize)
-    if(fontSize > min){
-
-    }
-    else{
-    
-    }
-    this.tag.css('font-size', fontSize)
-  }
-
-  Element.prototype.setWidth = function(){
-    this.width = parseInt(this.tag.css('width'), 10)
-  }
-
-  Element.prototype.setHeight = function(){
-    this.height = parseInt(this.tag.css('height'), 10)
-  }
-
-  Element.prototype.other = function(){
-  }
-
-  title.setLeft = function(){
-    this.left = (width - this.width) / 2
-    this.tag.css('left', this.left + 'px')
-  }
-
-  title.setTop = function(){
-    this.top = (height - this.height) / 6
-    this.tag.css('top', this.top + 'px')
-  }
-
-  subtitle.setLeft = function(){
-    this.left = (width - this.width) / 2
-    this.tag.css('left', this.left + 'px')
-  }
-
-  subtitle.setTop = function(){
-    this.top = title.top + title.height + height * 0.02
-    this.tag.css('top', this.top + 'px')
-  }
-
-  about.setLeft = function(){
-    this.left = (width - (this.width + projects.width + resume.width + width * 0.3)) / 2
-    this.tag.css('left', this.left + 'px')
-  }
-
-  about.setTop = function(){
-    this.top = subtitle.top + subtitle.height + height * 0.04
-    this.tag.css ('top', this.top + 'px')
-  }
-
-  about.tag.click(function(){
-    var about = "I'm an intensely curious individual who has spent the year immersing myself in computer science and web development.  I began my journey in August last year taking the prerequisite courses required to begin a master's in CS.  I set out with the intention of gaining a level of competency that allowed me to add value to a company while still being able to better myself.  I was able to excel, but didn't feel as though I was learning enough that directly impacted my ability to add value to a company. I finished the spring semester."
-    content.tag.append(about)
-  })
-
-  projects.setLeft = function(){
-    this.left = about.left + about.width + width * 0.15
-    this.tag.css('left', this.left + 'px')
-  }
-
-  projects.setTop = function(){
-    this.top = about.top
-    this.tag.css ('top', this.top + 'px')
-  }  
-
-  resume.setLeft = function(){
-    this.left = projects.left + projects.width + width * 0.15
-    this.tag.css('left', this.left + 'px')
-  }
-
-  resume.setTop = function(){
-    this.top = about.top
-    this.tag.css ('top', this.top + 'px')
-  }
-
-  content.setLeft = function(){
-    this.left = about.left
-    this.tag.css('left', this.left + 'px')
-  }
-
-  content.setTop = function(){
-    this.top = about.top + height * 0.1
-    this.tag.css ('top', this.top + 'px') 
-  }
-
-  content.other = function(){
-    this.height =  height * 0.4
-    this.tag.css('height', + this.height + 'px')
-    this.width = about.width + projects.width + resume.width + width * 0.3
-    this.tag.css('width', this.width + 'px')
-  }
-
-
-:css
-  #title,
-  #subtitle,
-  #about,
-  #projects,
-  #resume {
-    display: inline;
-    position: absolute;
-    margin: 0;
-    / font-family: 'Quicksand', sans-serif;
-    font-family: 'Lobster Two', cursive;
-  }
-
-  img {
-    height: 50px;
-  }
-
-  #about,
-  #projects,
-  #resume {
-    cursor: pointer;
-    / border-top: 2px solid black;
-    border-bottom: 2px solid black;
-  }
-
-  #about:hover,
-  #projects:hover,
-  #resume:hover {
-    color: darkred;
-  }
-
-  .content {
-    border: 2px solid black;
-    position: absolute;
-    margin: 0;
-    padding: 2px;
-    overflow: scroll;
-    overflow-x: hidden;
-  }
-
+    .icon-github-sign
+    .icon-facebook-sign
+    .icon-linkedin-sign
+    .icon-twitter-sign
