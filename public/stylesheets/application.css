@@ -94,7 +94,9 @@
   }
 
   .flex {
+    display: -webkit-box;
     display: -ms-box;
+    display: -moz-box;
     display: -webkit-flex;
     display: flex;
   }
@@ -103,21 +105,32 @@
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
     flex-flow: row;
+
     justify-content: space-around;
     -webkit-justify-content: space-around;
     -ms-flex-pack: justify;
+    -webkit-box-pack: space-around;
+    -moz-box-pack: space-around;
   }
 
   .col {
     -webkit-flex-flow: column;
+    -moz-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
+
     justify-content: space-between;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
+    -webkit-box-pack: space-between;
+    -moz-box-pack: space-between;
   }
 
   .icons {
     order: 5;
     margin-bottom: 20px;
+  }
+
+  a {
+    color: black;
   }
