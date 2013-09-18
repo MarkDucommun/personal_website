@@ -33,14 +33,6 @@
     /*box-shadow: inset 0px 0px 15px rgba(0,0,0,1)*/
   }
 
-  #title {
-    order: 1;
-  }
-
-  #subtitle {
-    order: 2;
-  }
-
   #about,
   #projects,
   #resume,
@@ -65,7 +57,6 @@
     overflow-x: hidden;
     background-color: rgba(255, 255, 255, 0.4);
     box-shadow:inset 0px 0px 20px rgba(0,0,0,0.4);
-    order: 4;
     /*border: 1px solid black;*/
   }
 
@@ -78,10 +69,11 @@
     /*border-top: 1px solid black;*/
     /*border-bottom: 1px solid black;*/
     box-shadow: 1px 0px 20px 0px rgba(0,0,0,0.4);
-    order: 3;
     margin-top: 20px;
     padding: 10px;
     justify-content: space-around;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: justify;
   }
 
   .words {
@@ -109,12 +101,20 @@
 
   .row {
     -webkit-flex-flow: row;
+    -ms-flex-flow: row;
+    flex-flow: row;
     justify-content: space-around;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: justify;
   }
 
   .col {
     -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
     justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
   }
 
   .icons {
