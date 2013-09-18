@@ -34,19 +34,11 @@ function resizeScreen(){
 function Element(tag){
   this.tag = $(tag)
   this.fontSize = 0
-  this.width = 0
-  this.height = 0
-  this.top = 0
-  this.left = 0
 }
 
 Element.prototype.resize = function(scale, min){
   this.setFontSize(scale, min)
   this.other()
-  this.setWidth()
-  this.setHeight()
-  this.setLeft()
-  this.setTop()
 }
 
 Element.prototype.setFontSize = function(scale, min){
@@ -78,100 +70,3 @@ Element.prototype.setHeight = function(){
 Element.prototype.other = function(){
 }
 
-title.setLeft = function(){
-  this.left = (width - this.width) / 2
-  $(this.tag.selector).css('left', this.left + 'px')
-}
-
-title.setTop = function(){
-  this.top = height * 0.05
-  $(this.tag.selector).css('top', this.top + 'px')
-}
-
-subtitle.setLeft = function(){
-  this.left = ((width - this.width) / 2) - 12
-  $(this.tag.selector).css('left', this.left + 'px')
-}
-
-subtitle.setTop = function(){
-  this.top = (title.top + title.height + height * 0.04) - 12
-  $(this.tag.selector).css('top', this.top + 'px')
-}
-
-about.setLeft = function(){
-  this.left = width * 0.5 - width * 0.35
-  $(this.tag.selector).css('left', this.left + 'px')
-}
-
-about.setTop = function(){
-  this.top = 2
-  $(this.tag.selector).css ('top', this.top + 'px')
-}
-
-about.tag.click(function(){
-  $('.words').hide()
-  $('#about-words').show()
-})
-
-projects.setLeft = function(){
-  var margin = (width * 0.7 - this.width - about.width - blogs.width - resume.width) / 3
-  this.left = about.left + about.width + margin
-  $(this.tag.selector).css('left', this.left + 'px')
-}
-
-projects.setTop = function(){
-  this.top = about.top
-  $(this.tag.selector).css ('top', this.top + 'px')
-}
-
-blogs.setLeft = function(){
-  var margin = (width * 0.7 - this.width - about.width - projects.width - resume.width) / 3
-  this.left = projects.left + projects.width + margin
-  $(this.tag.selector).css('left', this.left + 'px')
-}
-
-blogs.setTop = function(){
-  this.top = about.top
-  $(this.tag.selector).css ('top', this.top + 'px')
-}
-
-resume.setLeft = function(){
-  this.left = width * 0.5 + width * 0.35 - this.width
-  $(this.tag.selector).css('left', this.left + 'px')
-}
-
-resume.setTop = function(){
-  this.top = about.top
-  $(this.tag.selector).css ('top', this.top + 'px')
-}
-
-content.setLeft = function(){
-  this.left = width * 0.15
-  $(this.tag.selector).css('left', this.left + 'px')
-}
-
-content.setTop = function(){
-  this.top = banner.top + banner.height + height * 0.05
-  $(this.tag.selector).css ('top', this.top + 'px') 
-}
-
-content.other = function(){
-  this.height =  height * 0.4
-  $(this.tag.selector).css('height', + this.height + 'px')
-  this.width = (width * 0.7) - 4
-  $(this.tag.selector).css('width', this.width + 'px')
-}
-
-banner.setLeft = function(){
- 
-}
-
-banner.setTop = function(){
-  this.top = 24 + subtitle.top + subtitle.height + height * 0.02
-  $(this.tag.selector).css('top', this.top + 'px')
-}
-
-banner.other = function(){
-  this.height = about.height + 12
-  $(this.tag.selector).css('height', this.height + 'px')
-}

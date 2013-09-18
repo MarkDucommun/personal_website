@@ -10,10 +10,10 @@
     %link{href: '../public/stylesheets/font-awesome.css', rel: 'stylesheet', type: 'text/css'}
     %link{href: '../public/stylesheets/application.css', rel: 'stylesheet', type: 'text/css'}
   
-  %body
+  %body.flex.col
     %h1#title Mark Ducommun
     %h3#subtitle Web Developer
-    .banner
+    .banner.flex.row
       %h5#about About
       %h5#projects Projects
       %h5#blogs Blogs
@@ -22,8 +22,8 @@
       .words
         #aboutwords
           I'm an intensely curious individual who has spent the year immersing myself in computer science and web development.  I began my journey in August last year taking the prerequisite courses required to begin a master's in CS.  I set out with the intention of gaining a level of competency that allowed me to add value to a company while still being able to better myself.  I was able to excel, but didn't feel as though I was learning enough that directly impacted my ability to add value to a company. I finished the spring semester.
-
-    .icon-github-sign
-    .icon-facebook-sign
-    .icon-linkedin-sign
-    .icon-twitter-sign
+    .icons.flex.row
+      .icon-github-sign
+      .icon-facebook-sign
+      .icon-linkedin-sign
+      .icon-twitter-sign
