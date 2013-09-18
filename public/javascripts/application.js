@@ -89,12 +89,12 @@ title.setTop = function(){
 }
 
 subtitle.setLeft = function(){
-  this.left = (width - this.width) / 2
+  this.left = ((width - this.width) / 2) - 12
   $(this.tag.selector).css('left', this.left + 'px')
 }
 
 subtitle.setTop = function(){
-  this.top = title.top + title.height + height * 0.02
+  this.top = (title.top + title.height + height * 0.04) - 12
   $(this.tag.selector).css('top', this.top + 'px')
 }
 
@@ -167,7 +167,7 @@ banner.setLeft = function(){
 }
 
 banner.setTop = function(){
-  this.top = subtitle.top + subtitle.height + height * 0.02
+  this.top = 24 + subtitle.top + subtitle.height + height * 0.02
   $(this.tag.selector).css('top', this.top + 'px')
 }
 
