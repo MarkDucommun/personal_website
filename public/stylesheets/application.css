@@ -52,6 +52,7 @@
   #resume:hover,
   #blogs:hover {
     text-shadow: 1px 1px 15px  rgba(0,0,0,1);
+    color: rgba(139,0,0,1);
   }
 
   .content {

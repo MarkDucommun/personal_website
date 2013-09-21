@@ -8,6 +8,7 @@ var blogs = new Element('#blogs')
 var resume = new Element('#resume')
 var content = new Element('.content')
 var banner = new Element('.banner')
+var icons = new Element('[class^="icon-"]')
 
 $(function(){
   resizeScreen()
@@ -29,6 +30,7 @@ function resizeScreen(){
   resume.resize(0.06, 10)
   content.resize(0.04, 10)
   banner.resize(0, 0)
+  icons.resize(0.06)
 }
 
 function Element(tag){
