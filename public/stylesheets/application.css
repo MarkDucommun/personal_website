@@ -57,7 +57,7 @@
   .content {
     font-family: 'Old Standard TT', serif;
     position: relative;
-    margin: 5%;
+    margin: 2% 10%;
     overflow-x: hidden;
     background-color: rgba(255, 255, 255, 0.4);
     box-shadow:inset 0px 0px 20px rgba(0,0,0,0.4);
@@ -70,7 +70,7 @@
   .banner {
     background-color: rgba(5, 0, 0, 0.05);
     box-shadow: 1px 0px 20px 0px rgba(0,0,0,0.4);
-    margin-top: 20px;
+    margin-top: 2%;
     padding: 10px;
     justify-content: space-around;
     -webkit-justify-content: space-around;
@@ -78,7 +78,7 @@
   }
 
   .words {
-    padding: 10px;
+    padding: 5%;
   }
 
   [class^="icon-"]:hover,
