@@ -17,6 +17,34 @@ $(function(){
   $(window).resize(function(){
     resizeScreen()
   })
+  
+  $('#about').click(function(){
+    about.show_element()
+  })
+
+  $('#projects').click(function(){
+    projects.show_element()
+  })
+
+  $('#blogs').click(function(){
+    blogs.show_element()
+  })
+
+  $('#resume').click(function(){
+    resume.show_element()
+  })
+
+  $('#next').click(function(event){
+    event.preventDefault();
+    $('#frames').animate({"right": "100%"}, 1000, function(){ 
+      $(this).append($('#frames li:first-child').remove()).css("right", 0)
+    });
+  });
+  
+  $('#previous').click(function(event){
+    event.preventDefault();
+    $('#frames').prepend($('#frames li:last-child').remove()).css("right", "100%").animate({"right" : 0}, 1000)
+  })
 })
 
 function resizeScreen(){
@@ -72,3 +100,7 @@ Element.prototype.setHeight = function(){
 Element.prototype.other = function(){
 }
 
+Element.prototype.show_element = function(){
+  $('.words > *').hide();
+  $(this.tag.selector + 'words').show()
+}

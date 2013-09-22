@@ -12,12 +12,13 @@
     %link{href: '../public/stylesheets/application.css', rel: 'stylesheet', type: 'text/css'}
   
   %body.flex.col
-    %h1#title Mark Ducommun
-    %h3#subtitle Web Developer
+    .title.stretch.flex.column
+      %h1#title.center Mark Ducommun
+      %h3#subtitle.center Web Developer
     .banner.flex.row
       %h5#about About
       %h5#projects Projects
-      %h5#blogs Blogs
+      %h5#blogs Blog
       %h5#resume Resume
     .content
       .words
@@ -26,13 +27,26 @@
           %br
           %p I set out with the intention of gaining a level of competency in CS that would allow me to add value to a company while continuing to rapidly improve my own skills.  I began my journey with a year of graduate coursework at Illinois Institute of Technology.  I was very interested by the content but decided that I was not satisfied with the pace of learning offered by the masters program. I left after completing an introduction to java, a data structures course and a course on computer architecture.
           %br
-          %p I started at Dev Bootcamp shortly after leaving IIT.
-        #projectwords
-
-        #blogwords
-
+          %p I started at Dev Bootcamp shortly after leaving IIT.  Dev Bootcamp - Chicago was an incredibly rigorous 
+        #projectswords
+          #controls.flex.row
+            %h3#previous Previous
+            %h3#next Next
+          #carousel
+            %ul#frames
+              %li
+                %img{src: "http://f.cl.ly/items/3e332b2e0B3d311a1U1X/wargames.jpg"}
+                %a Source Code
+              %li
+                %img{src: "http://f.cl.ly/items/2h0Q3P0t0B3Q0N370u43/businessdude.jpg"}
+                %a Source Code
+              %li
+                %img{src: "http://f.cl.ly/items/3i2V2V0D3n293d0y2y0U/tron.jpg"}
+                %a Source Code
+        #blogswords
+          %p Some blog posts
         #resumewords
-          %h3 
+          %p Resume
     .icons.flex.row
       %a.icon-github-sign{href: 'https://github.com/MarkDucommun'}
       %a.icon-facebook-sign{href: 'https://www.facebook.com/mducommu'}
