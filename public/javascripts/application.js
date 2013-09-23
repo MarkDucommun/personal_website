@@ -13,6 +13,7 @@ var icons = new Element('[class^="icon-"]')
 $(function(){
   resizeScreen()
   resizeScreen()
+  about.show_element()
 
   $(window).resize(function(){
     resizeScreen()
